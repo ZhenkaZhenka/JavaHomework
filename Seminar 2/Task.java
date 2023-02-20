@@ -9,7 +9,6 @@ public class Task {
         Integer[] array = ReadFile(size);
         WriteResult(array);
         System.out.println("You can look result in 'output.txt'");
-
     }
 
     // Метод посчета строк в тексте для определения размера массива
@@ -33,7 +32,8 @@ public class Task {
         br.close();
         return array;
     }
-// Метод удаления лишних символов из строки из файла
+
+    // Метод удаления лишних символов из строки из файла
     public static Integer ParseText(String word) {
         StringBuilder number = new StringBuilder();
         char[] simbols = word.toCharArray();
@@ -44,7 +44,8 @@ public class Task {
         }
         return Integer.parseInt(number.toString());
     }
-// Метод записи результата в текст
+
+    // Метод записи результата в текст
     public static void WriteResult(Integer[] array) throws IOException {
         FileWriter fr = new FileWriter("Seminar 2/output.txt", false);
         String result = GetResult(array);
@@ -52,7 +53,7 @@ public class Task {
         fr.close();
     }
 
-// Метод получения результата в зависимости от входных данных
+    // Метод получения результата в зависимости от входных данных
     public static String GetResult(Integer[] array) {
         Integer result = array[0];
         Integer degree = array[1];
@@ -66,7 +67,8 @@ public class Task {
             return "1";
         }
     }
-// Метод возведения в положительную степень
+
+    // Метод возведения в положительную степень
     static public String CalculationPositiveDegree(Integer result, Integer degree, Integer[] array) {
         while (degree - 1 > 0) {
             result *= array[0];
@@ -74,7 +76,8 @@ public class Task {
         }
         return result.toString();
     }
-//    Метод возведения в отрицательную степень
+
+    //    Метод возведения в отрицательную степень
     static public String CalculationNegativeDegree(Integer result, Integer degree, Integer[] array) {
         while (degree + 1 < 0) {
             result *= array[0];
