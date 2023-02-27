@@ -44,7 +44,10 @@ public class WaveAlgorithm {
                 {"", "", "", "", "", "", ""}
         };
     }
-
+/*
+* Здесь заничаются методы просчета и отрисовки карты с количеством ходов от точки А
+* до каждой точки на карте
+* */
     static void startFillingPitches(String[][] pitch, ArrayList list, Integer mark){
         while(list.size() > 0){
             fillingPitches(pitch, list, mark);
@@ -109,7 +112,9 @@ public class WaveAlgorithm {
         }
         return copy;
     }
-
+/*
+* Здесь начинаются методы поиска и отрисовки кратчайшего пути
+* */
     static void findWayList(String[][] pitch, ArrayList list, int bx, int by, int way){
         if(list.size() < way){
             stepUpWay(pitch, list, bx, by, way);
