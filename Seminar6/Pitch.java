@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 class Pitch {
+    String[][] pitch;
+    Pitch(){
+        pitch = getPitch();
+    }
 
     static String[][] getPitch() {
         return new String[][]{

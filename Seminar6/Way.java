@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 
 public class Way {
-    String[][] way = Pitch.getPitch();
+    String[][] way;
+    Way() {
+        way = Pitch.getPitch();
+    }
 
     static void findWayList(String[][] pitch, ArrayList list, int bx, int by, int way){
         if(list.size() < way){
